@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Resources/CSS/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My Website</title>
+</head>
+
+<body>
+    <header class="header">
+        <!-- ! logo -->
+        <div class="header__logo">
+            <img src="./Resources/Images/logo.png" alt="logo">
+        </div>
+        <!-- ! navbar -->
+        <nav class="header__navbar">
+            <a class="header__navbar-link" href="#">Trang chủ</a>
+            <a class="header__navbar-link" href="#">Phát trực tiếp</a>
+            <nav class="header__navbar-link header__dropdown" onmousemove="showDropDown()">
+                Phân loại <i class="icon fas fa-caret-down"></i>
+                <div id="header__classify" class="header__classify" onmouseleave="hiddenDropDown()">
+                    <h6 class="header__classify-heading">Hot</h6>
+                    <ul class="header__classify-list">
+                        <li class="header__classify-item">
+                            <img class="header__classify-item-image" src="./Resources/Images/play-together.jpg"
+                                alt="image">
+                            <span class="header__classify-item-name">Name Game</span>
+                        </li>
+                        <li class="header__classify-item">
+                            <img class="header__classify-item-image" src="./Resources/Images/play-together.jpg"
+                                alt="image">
+                            <span class="header__classify-item-name">Name Game</span>
+                        </li>
+                        <li class="header__classify-item">
+                            <img class="header__classify-item-image" src="./Resources/Images/play-together.jpg"
+                                alt="image">
+                            <span class="header__classify-item-name">Name Game</span>
+                        </li>
+                        <li class="header__classify-item">
+                            <img class="header__classify-item-image" src="./Resources/Images/play-together.jpg"
+                                alt="image">
+                            <span class="header__classify-item-name">Name Game</span>
+                        </li>
+                        <li class="header__classify-item">
+                            <img class="header__classify-item-image" src="./Resources/Images/play-together.jpg"
+                                alt="image">
+                            <span class="header__classify-item-name">Name Game</span>
+                        </li>
+                        <li class="header__classify-item">
+                            <img class="header__classify-item-image" src="./Resources/Images/play-together.jpg"
+                                alt="image">
+                            <span class="header__classify-item-name">Name Game</span>
+                        </li>
+                    </ul>
+                    <button class="header__classify-button">
+                        Xem toàn bộ >
+                    </button>
+                </div>
+            </nav>
+            <a class="header__navbar-link" href="#">Giải đấu</a>
+        </nav>
+        <div class="header__button-wrap">
+            <!-- ! search-box -->
+            <div class="header__search-box">
+                <button class="header__search-button"><i class="fas fa-search"></i></button>
+                <input class="header__search-input" type="text" placeholder="Dragon Dev">
+            </div>
+            <button class="header__menu-button"><i class="fas fa-ellipsis-h"></i></button>
+            <button class="header__button header__menu-sign-up">Đăng ký</button>
+            <button class="header__button header__menu-sign-in">Đăng nhập</button>
+        </div>
+    </header>
+    <script>
+        const dropDown = document.getElementById("header__classify");
+        const timeOut = "0.2s";
+        function showDropDown() {
+            dropDown.style.display = "block";
+            dropDown.style.animation = `scaleIn ease ${timeOut} forwards`;
+        }
+        function hiddenDropDown() {
+            dropDown.style.animation = `scaleOut ease ${timeOut} forwards`;
+            setTimeout(() => {
+                dropDown.style.display = "none";
+            }, 100);
+        }
+    </script>
+</body>
+
+</html>
